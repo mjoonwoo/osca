@@ -1,1 +1,1 @@
-# chess-analysis
+# OSCA

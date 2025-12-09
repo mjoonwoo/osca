@@ -1,22 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { gameSubject } from './Game';
-import Board from './Board';
+import React from 'react';
 import './App.css';
+import Analyze from './Analyze';
+import { Header } from './Header';
 
 function App() {
-  const [board, setBoard] = useState([]);
-  
-  useEffect(() => {
-    const subscribe = gameSubject.subscribe(game => setBoard(game.board));
-    return () => subscribe.unsubscribe();
-  }, [])
-  
+  const [tab, setTab] = React.useState('analysis'); // 수정: 'analyze' -> 'analysis'
+
   return (
-    <div className='container'>
-      <div className='board-container'>
-        <Board board={board} />
-      </div>
-    </div>
+    <Analyze />
   );
 }
 
