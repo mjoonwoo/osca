@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Square from './Square';
-import Piece from './Piece';
+import Piece from '../Piece';
 import { useDrop } from 'react-dnd';
 import { handleMove } from './Game';
 import { gameSubject } from './Game';

@@ -9,7 +9,7 @@ export function Header({ onTabChange }) {
 	}
 
 	return (
-		<nav className="navbar bg-dark border-bottom border-body" data-bs-theme="dark" style={{ width: '100vw' }}>
+		<nav className="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
 			<div className="container-fluid">
 				<span className="navbar-brand mb-0 h1 d-flex align-items-center">
 					<img

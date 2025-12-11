@@ -1,6 +1,6 @@
 import { Chess } from 'chess.js';
 import { BehaviorSubject } from 'rxjs';
-import { AnalyzePosition } from './AnalyzePosition';
+import { analyzePosition } from '../../hooks/analyzePosition';
 
 // let promotion = 'rnbqk2r/ppppbpPp/4p3/8/8/5P2/PPPPP2P/RNBQKBNR w kq - 0 1'
 
@@ -88,7 +88,7 @@ function updateGame(pendingPromotion) {
 
   gameSubject.next(baseGame);
 
-  AnalyzePosition(chess.fen())
+  analyzePosition(chess.fen())
     .then((data) => {
       gameSubject.next({
         ...baseGame,
@@ -96,10 +96,8 @@ function updateGame(pendingPromotion) {
       });
     })
     .catch((err) => {
-      console.error('AnalyzePosition failed:', err);
+      console.error('analyzePosition failed:', err);
     });
-  
-  AiMove();
 }
 
 function getGameResult() {
@@ -119,18 +117,4 @@ function getGameResult() {
   } else {
     return 'UNKNOWN REASON'
   }
-}
-
-function AiMove() {
-  const data = AnalyzePosition(chess.fen())
-  .then((data) => {
-    if (data.turn === 'w') return;
-    const aiMove = data.move;
-    const from = aiMove.slice(0,2);
-    const to = aiMove.slice(2,4);
-    move(from, to);
-  })
-  .catch((err) => {
-    console.error('AnalyzePosition failed:', err);
-  });
 }

@@ -1,6 +1,6 @@
 import { Chess } from 'chess.js';
 
-export async function AnalyzePosition(fen) {
+export async function analyzePosition(fen) {
   /*
   const apiUrl = 'https://stockfish.online/api/s/v2.php';
   const params = new URLSearchParams();

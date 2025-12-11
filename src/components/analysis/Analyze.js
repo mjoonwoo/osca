@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { gameSubject, initGame } from './Game';
 import Board from './Board';
 import { undo, redo } from './Game';
-import { convertMove } from './AnalyzePosition';
+import { convertMove } from '../../hooks/analyzePosition';
 
 function Analyze() {
   const [board, setBoard] = useState([]);

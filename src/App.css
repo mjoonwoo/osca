@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.App {
+  max-width: 100%;
+}
+
 .board {
   width: 100%;
   height: 100%;
@@ -12,7 +16,7 @@
 
 .container {
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,4 +111,19 @@
   background-color: #6c757d;
   color: #fff;
   box-shadow: none;
+}
+
+.footer {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(50, 50, 50);
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.link-button {
+  margin: 10px;
+  cursor: pointer;
 }
