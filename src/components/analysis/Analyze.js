@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { gameSubject, initGame } from './Game';
 import Board from './Board';
-import { undo, redo, getFen } from './Game';
+import { undo, redo } from './Game';
 import { convertMove } from '../../hooks/analyzePosition';
 
 function Analyze() {

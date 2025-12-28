@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Chess } from 'chess.js';
 import { BehaviorSubject } from 'rxjs';
 import { analyzePosition } from '../../hooks/analyzePosition';
