@@ -7,7 +7,7 @@ function Footer() {
         </span><br />
         <img src={require('../assets/logo256_white.png')} alt='Logo' width={24} height={24} />
         OSCA: Open Source Chess Analyzer<br />
-        Licensed under <a href='https://opensource.org/licenses/MIT' target='_blank' rel='noreferrer'>GPLv3</a>
+        Licensed under <a href='https://www.gnu.org/licenses/gpl-3.0.html' target='_blank' rel='noreferrer'>GPLv3</a>
       </div>
       <p>© 2025 mjoonwoo</p>
     </footer>
